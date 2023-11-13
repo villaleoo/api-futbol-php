@@ -3,6 +3,8 @@ API DE CLUBES Y LIGAS DE FUTBOL
 Cuenta con un token de seguridad simulado para pruebas en los verbos POST y PUT. Para usarlo correctamente con estos verbos
 agregar la qery **"?token=AsJkt47Ops2tKlmZ"** a la URL.
 
+Se pueden agregar clubes que pertenezcan a la liga con id=1 o id=2. Si se crean en la db mas ligas se podrian agregar sin problema clubes que pertenezcan a esas nuevas ligas.
+
 **$tokenDeSeguridad**=AsJkt47Ops2tKlmZ
 
 
