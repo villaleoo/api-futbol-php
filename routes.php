@@ -3,7 +3,8 @@ require_once './router/Router.php';
 require_once './app/controllers/TeamApiController.php';
 require_once './app/controllers/LeagueApiController.php';
 
-/*LINEA AGREGADA PARA QUE SEA POSIBLE CONSUMIR LA API DESDE CUALQUIER DISPOSITIVO */
+/*LINEA AGREGADA PARA QUE SEA POSIBLE CONSUMIR LA API DESDE CUALQUIER DISPOSITIVO*/
+/*QUITAR ESTA LINEA NO INFLUYE EN EL FUNCIONAMIENTO DE POSTMAN */
 header("Access-Control-Allow-Origin: *");
 
 $router= new Router();
