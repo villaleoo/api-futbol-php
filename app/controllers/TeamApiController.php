@@ -19,7 +19,8 @@ class TeamApiController extends ApiController{
             $resources= $this->getAllByOrder($filter);
 
         }elseif (isset($_GET["minGolesEnLiga"]) && !empty($_GET["minGolesEnLiga"])) {
-            $resources = $this->model->getAllMinGoalsLeague($_GET["minGolesEnLiga"]);
+            $min = intval($_GET["minGolesEnLiga"]);
+            $resources = $this->model->getAllMinGoalsLeague($min);
         }else{
             $resources=$this->model->getAll();
         }
