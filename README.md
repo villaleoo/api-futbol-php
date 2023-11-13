@@ -1,8 +1,10 @@
 API DE CLUBES Y LIGAS DE FUTBOL
 
-Cuenta con un token de seguridad simulado para pruebas en los verbos POST y PUT. Para usarlo correctamente agregar la qery "?token=$tokenDeSeguridad" a la URL.
+Cuenta con un token de seguridad simulado para pruebas en los verbos POST y PUT.
 
-$tokenDeSeguridad=AsJkt47Ops2tKlmZ
+Para usarlo correctamente agregar la qery **"?token=$tokenDeSeguridad"** a la URL.
+
+**$tokenDeSeguridad**=AsJkt47Ops2tKlmZ
 
 
 # ENDPOINTS
