@@ -2,6 +2,7 @@
 require_once './router/Router.php';
 require_once './app/controllers/TeamApiController.php';
 require_once './app/controllers/LeagueApiController.php';
+require_once './app/controllers/AuthApiController.php';
 
 /*LINEA AGREGADA PARA QUE SEA POSIBLE CONSUMIR LA API DESDE CUALQUIER DISPOSITIVO*/
 /*QUITAR ESTA LINEA NO INFLUYE EN EL FUNCIONAMIENTO DE POSTMAN */
@@ -10,6 +11,7 @@ header("Access-Control-Allow-Origin: *");
 $router= new Router();
 
                 /* resource(recurso), metodo http, controlador, metodoDelControlador*/
+$router->addRoute('user/token', 'GET',    'AuthApiController', 'getToken'   ); 
 $router->addRoute('clubes','GET','TeamApiController','getAllResources');
 $router->addRoute('clubes','POST','TeamApiController','addResource');
 $router->addRoute('clubes/:id','GET','TeamApiController','getResource');
