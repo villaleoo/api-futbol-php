@@ -11,7 +11,7 @@ header("Access-Control-Allow-Origin: *");
 $router= new Router();
 
                 /* resource(recurso), metodo http, controlador, metodoDelControlador*/
-$router->addRoute('user/token', 'GET',    'AuthApiController', 'getToken'   ); 
+$router->addRoute('user/token', 'GET', 'AuthApiController', 'getToken'   ); 
 $router->addRoute('clubes','GET','TeamApiController','getAllResources');
 $router->addRoute('clubes','POST','TeamApiController','addResource');
 $router->addRoute('clubes/:id','GET','TeamApiController','getResource');

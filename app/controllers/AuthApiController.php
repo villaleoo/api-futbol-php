@@ -1,5 +1,4 @@
 <?php
-
 require_once './app/views/APIView.php';
 require_once 'app/helpers/AuthHelper.php';
 require_once './app/models/UsersModel.php';
@@ -23,22 +22,22 @@ class AuthApiController  {
     }
 
     function getToken($params = []) {
-        $basic = $this->authHelper->getAuthHeaders(); // Darnos el header 'Authorization:' 'Basic: base64(usr:pass)'
+        $basic = $this->authHelper->getAuthHeaders(); 
 
         if(empty($basic)) {
             $this->view->response('No envió encabezados de autenticación.', 401);
             return;
         }
 
-        $basic = explode(" ", $basic); // ["Basic", "base64(usr:pass)"]
+        $basic = explode(" ", $basic); 
 
         if($basic[0]!="Basic") {
             $this->view->response('Los encabezados de autenticación son incorrectos.', 401);
             return;
         }
 
-        $userPass = base64_decode($basic[1]); // usr:pass
-        $userPass = explode(":", $userPass); // ["usr", "pass"]
+        $userPass = base64_decode($basic[1]); 
+        $userPass = explode(":", $userPass); 
 
         $userName = $userPass[0];
         $pass = $userPass[1];
